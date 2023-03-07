@@ -1,10 +1,8 @@
 <?php
 
-session_start();
-error_reporting(E_ALL & ~E_NOTICE);
 $url = $_SERVER['REQUEST_URI'];
 
-
+echo $_SESSION['errorReg']
 ?>
 
 
@@ -28,7 +26,7 @@ $url = $_SERVER['REQUEST_URI'];
                         </button>
                     </li>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="search.php?location=Location&activity=Activity&grade=Grade&date=Date">Destinations</a></li>
+                    <li><a href="search.php">Destinations</a></li>
                     <li><a href="news.php">News</a></li>
                     <li><a href="about.php">About</a></li>
                     <?php if (isset($_SESSION['user'])) {

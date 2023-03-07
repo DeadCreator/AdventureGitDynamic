@@ -20,7 +20,7 @@ $url = $_SERVER['REQUEST_URI'];
     <button id="back-to-top" >&#8593;</button>
     <header>
         <section class="up">
-            <img src="images/logo.png" class="logo">
+            <img alt="sorry, we are working in order you don't see this text" src="images/logo.png" class="logo">
             <nav>
                 <button id="menu-open">
                   <div class="menu-style"></div>
@@ -81,7 +81,7 @@ $url = $_SERVER['REQUEST_URI'];
                         </form>
                     </div>
                 <?php } ?>
-                <form class="header-form" method="post" action="filters.php">
+                <form class="header-form" method="post" action="search.php">
                     <legend>Holiday Finder</legend>
                     <div class="header-square"></div>
                     <select name="location">
@@ -113,12 +113,12 @@ $url = $_SERVER['REQUEST_URI'];
                     <input type="submit" value="Explore">
                 </form>
             </div>
-            <img src="images/header_main.png" class="header_img">
+            <img alt="sorry, we are working in order you don't see this text" src="images/header_main.webp" class="header_img">
         </section>
     </header>
     <main>
         <section class="main-1">
-            <img  src="images/main-1.png"  >
+            <img alt="sorry, we are working in order you don't see this text"  src="images/main-1.webp"  >
             <div class="main-1-paragraph">
                 <h2>A new way to explore the world</h2>
                 <p>For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect
@@ -157,7 +157,7 @@ $url = $_SERVER['REQUEST_URI'];
                     is the ultimate resource before and during a trip.</p>
                 <button class="main-1-button">Download</button>
             </div>
-            <img src="images/main-3.png">
+            <img alt="sorry, we are working in order you don't see this text" src="images/main-3.webp">
         </section>
         <section class="main-4">
             <div class="main-4-header">
@@ -166,21 +166,21 @@ $url = $_SERVER['REQUEST_URI'];
             </div>
             <div class="main-4-list">
                 <div class="main-4-list-paragraph-1">
-                    <img src="images/main-4-image-1.png">
+                    <img alt="sorry, we are working in order you don't see this text" src="images/main-4-image-1.webp">
                     <h3>The many benefits of taking a healing holiday</h3>
                     <p>‘Helaing holidays’ are on the rise 
                         tohelp maximise your health and happines...</p>
                     <a href="news.php#trending-stories">Read more</a>
                 </div>
                 <div class="main-4-list-paragraph-2">
-                    <img src="images/main-4-image-2.png">
+                    <img alt="sorry, we are working in order you don't see this text" src="images/main-4-image-2.webp">
                     <h3>The best Kyoto restaurant to try Japanese food</h3>
                     <p>From tofu to teahouses, here’s our guide to Kyoto’s best restaurants
                         to visit...</p>
                     <a href="news.php#trending-stories">Read more</a>
                 </div>
                 <div class="main-4-list-paragraph-3">
-                    <img src="images/main-4-image-3.png">
+                    <img alt="sorry, we are working in order you don't see this text" src="images/main-4-image-3.webp">
                     <h3>Skip Chichen Itza and head to this remote Yucatan</h3>
                     <p>It’s remote and challenging to get,
                         but braving the jungle and exploring
@@ -188,7 +188,7 @@ $url = $_SERVER['REQUEST_URI'];
                     <a href="news.php#trending-stories">Read more</a>
                 </div>
                 <div class="main-4-list-paragraph-4">
-                    <img src="images/main-4-image-4.png">
+                    <img alt="sorry, we are working in order you don't see this text" src="images/main-4-image-4.webp">
                     <h3>Surf’s up at these beginner spots around the world</h3>
                     <p>If learning to surf has in on your to-
                         do list for a while, the good news

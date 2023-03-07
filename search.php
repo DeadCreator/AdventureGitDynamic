@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+error_reporting(E_ALL & ~E_NOTICE);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,35 +29,35 @@
     ?>
     <main class="main-search">
         <aside class="filters">
-            <form class="search-form" method="post" action="filters.php">
+            <form class="search-form" method="post" action="search.php">
                 <select name="location">
                     <option>Location</option>
                     <?php foreach($location as $key => $value): ?>
-                    <option value="<?=$key ?>" <?php if ($key == $_GET['location']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
+                    <option value="<?=$key ?>" <?php if ($key == $_POST['location']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <select name="activity">
                     <option>Activity</option>
                     <?php foreach($activity as $key => $value): ?>
-                        <option value="<?=$key ?>" <?php if ($key == $_GET['activity']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
+                        <option value="<?=$key ?>" <?php if ($key == $_POST['activity']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <select name="grade">
                     <option>Grade</option>
                     <?php foreach($grade as $key => $value): ?>
-                        <option value="<?=$key ?>" <?php if ($key == $_GET['grade']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
+                        <option value="<?=$key ?>" <?php if ($key == $_POST['grade']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <select name="date">
                     <option>Date</option>
                     <?php foreach($date as $key => $value): ?>
-                        <option value="<?=$key ?>" <?php if ($key == $_GET['date']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
+                        <option value="<?=$key ?>" <?php if ($key == $_POST['date']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <select name="sort">
                     <option hidden>Sort by</option>
                     <?php foreach($sort as $key => $value): ?>
-                        <option value="<?=$key ?>" <?php if ($key == $_GET['sort']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
+                        <option value="<?=$key ?>" <?php if ($key == $_POST['sort']) {?> selected="selected" <?php } ?>><?=$value; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <input type="submit" value="Apply">
@@ -62,8 +68,8 @@
 
                 include 'dbConfig.php';
 
-                if (isset($_GET['location']) ||  isset($_GET['activity']) ||
-                 isset($_GET['grade']) || isset($_GET['date']) || isset($_GET['sort'])) {
+                if (isset($_POST['location']) ||  isset($_POST['activity']) ||
+                 isset($_POST['grade']) || isset($_POST['date']) || isset($_POST['sort'])) {
 
                     $locationFilter = 'location = ?';
                     $activityFilter = 'activity = ?';
@@ -71,31 +77,31 @@
                     $dateFilter = 'date = ?';
                     $sortFilter = ' ORDER BY price ';
 
-                    $data = ['location' => $_GET['location'], 'activity' => $_GET['activity'],
-                        'grade' => $_GET['grade'], 'date' => $_GET['date']];
+                    $data = ['location' => $_POST['location'], 'activity' => $_POST['activity'],
+                        'grade' => $_POST['grade'], 'date' => $_POST['date']];
 
-                    if ($_GET['location'] == "Location" || empty($_GET['location'])) {
+                    if ($_POST['location'] == "Location" || empty($_POST['location'])) {
                         $locationFilter = 1;
                         unset($data['location']);
                     }
-                    if ($_GET['activity'] == "Activity" || empty($_GET['activity'])) {
+                    if ($_POST['activity'] == "Activity" || empty($_POST['activity'])) {
                         $activityFilter = 1;
                         unset($data['activity']);
                     }
-                    if ($_GET['grade'] == "Grade" || empty($_GET['grade'])) {
+                    if ($_POST['grade'] == "Grade" || empty($_POST['grade'])) {
                         $gradeFilter = 1;
                         unset($data['grade']);
                     }
-                    if ($_GET['date'] == "Date" || empty($_GET['date'])) {
+                    if ($_POST['date'] == "Date" || empty($_POST['date'])) {
                         $dateFilter = 1;
                         unset($data['date']);
                     }
 
-                    if ($_GET['sort'] == "Sort By" || empty($_GET['sort'])) {
+                    if ($_POST['sort'] == "Sort By" || empty($_POST['sort'])) {
                         $sortFilter = "";
                     }
 
-                    if ($_GET['sort'] == "High First") {
+                    if ($_POST['sort'] == "High First") {
                         $sortFilter .= 'DESC';
                     }
 

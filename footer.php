@@ -19,8 +19,8 @@
                 <li><a href="index.html#guides-download">Destinations Guides</a></li>
                 <li><a href="news.php#pictorial-and-gifts">Pictorial & Gifts</a></li>
                 <li><a href="news.php#special-offers">Special Offers</a></li>
-                <li><a href="about.html#delivery-times">Delivery Times</a></li>
-                <li><a href="about.html#faqs">FAQs</a></li>
+                <li><a href="about.php#delivery-times">Delivery Times</a></li>
+                <li><a href="about.php#faqs">FAQs</a></li>
             </ul>
             <ul>Interests
                 <li><a href="news.php#adventure">Adventure</a></li>

@@ -26,8 +26,8 @@ class User
                     header($url);
                 }
                 else {
-                    header($url);
                     $_SESSION['errorLog'] = "Username or password isn't correct";
+                    header($url);
 
                 }
             }
