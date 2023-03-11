@@ -21,14 +21,24 @@ error_reporting(E_ALL & ~E_NOTICE);
     <button id="back-to-top" >&#8593;</button>
     <?php include 'header.php'; ?>
     <main class="news-main">
-        <section class="news-trending-stories">
+    <section id="special-offers" class="special-offers">
+            <h1>Special Offers</h1>
             <div class="single-images">
                 <div class="image-set">
-                  <img src="images/search-result-1.png" alt="SORRY">
-                  <img src="images/single-product-image-1-2.jpg" alt="BUT THIS PART">
-                  <img src="images/single-product-image-1-3.jpg" alt="WILL BE ADDED SOON">
-                  <img src="images/single-product-image-1-4.jpg" alt="SO, PLEASE">
-                  <img src="images/single-product-image-1-5.jpg" alt="LEAVE THIS PAGE">
+                  <div class="new-article a1">
+                      <h2 class="new-title">Family trip in <b style="color: orange;">winter</b> is cheaper in 
+                        <b style="color: #1abc83;">summer!</b></h2>
+                      <div class="sale-wrap">SALE 50%</div>
+                  </div>
+                  <div class="new-article a2">
+                      <h2 class="new-title">Article two</h2>
+                  </div>
+                  <div class="new-article a3">
+                      <h2 class="new-title">Article three</h2>
+                  </div>
+                  <div class="new-article a4">
+                      <h2 class="new-title">Article four</h2>
+                  </div>
                 </div>
         
                 <nav>
@@ -39,6 +49,7 @@ error_reporting(E_ALL & ~E_NOTICE);
         </section>
     </main>
     <?php include 'footer.php';?>
-      <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>

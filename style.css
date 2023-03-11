@@ -1329,12 +1329,84 @@ footer {
 
 /* news page styles */ 
 
-.news-trending-stories {
-    margin-top: 5vw;
+
+.special-offers {
+    margin-top: 0;
+}
+
+.special-offers h1 {
+    padding: 0;
+    width: 100%;
+    font-size: 3vw;
 }
 
 .news-main .single-images {
-    height: 50vw;
+    height: 40vw;
+    width: 100%;
+    margin-top: 2vw;
 }
 
+.news-main .image-set {
+    width: 400%;
+}
+
+.new-article {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+.a1 {
+    background: url("images/new-hot-1.jpg") center no-repeat;
+    background-size: cover;
+}
+.a2 {
+    background-color: orange;
+}
+.a3 {
+    background-color: yellow;
+}
+.a4 {
+    background-color: lime;
+}
+
+.sale-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    font-weight: 800;
+    color: white;
+    right: -15%;
+    top: 15%;
+    width: 53%;
+    height: 20%;
+    background-color: red;
+    rotate: 45deg;
+}
+
+.new-title {
+    margin-top: auto;
+    color: white;
+    margin-right: auto;
+    padding: 2vw;
+    font-family: Mulish;
+    font-size: 3vw;
+    font-weight: 900;
+    backdrop-filter: blur(15px);
+    width: 40%;
+    border-radius: 10px;
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+
+    .news-main {
+        margin-top: 20vw;
+    }
+
+}
 

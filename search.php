@@ -143,7 +143,7 @@ error_reporting(E_ALL & ~E_NOTICE);
                         <h3 class="date"><?= $trip -> date?></h3>
                         <p class="desc"><?= $trip -> description?></p>
                     </div>
-                    <form action="likes.php?href=<?=$url?>&id=<?=$trip -> id?>" method="post">
+                    <form action="favourites.php?href=<?=$url?>&id=<?=$trip -> id?>" method="post">
                         <button name="addToFavBtn" class="addToFav">Add to Favourite</button>
                     </form>
                 </a>
